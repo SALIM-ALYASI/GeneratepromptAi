@@ -4,19 +4,48 @@
 
 ## 🚀 التثبيت السريع
 
-### كـ Composer Package (الطريقة الموصى بها)
+### ⚠️ مهم: المكتبة حالياً متاحة من GitHub فقط
+
+أضف المستودع في `composer.json` أولاً:
+
+```json
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/SALIM-ALYASI/GeneratepromptAi.git"
+        }
+    ],
+    "require": {
+        "alyasi/dashboard-ui": "dev-main"
+    }
+}
+```
+
+### كـ Composer Package
 
 ```bash
 # 1. تثبيت المكتبة
-composer require alyasi/dashboard-ui
+composer require alyasi/dashboard-ui:dev-main --repository='{"type":"vcs","url":"https://github.com/SALIM-ALYASI/GeneratepromptAi.git"}'
 
-# 2. تثبيت الملفات تلقائياً
+# 2. إعادة تحميل Autoload
+composer dump-autoload
+
+# 3. مسح Cache
+php artisan config:clear
+php artisan cache:clear
+
+# 4. تثبيت الملفات تلقائياً
 php artisan dashboard-ui:install
 
-# 3. استخدام المكتبة
+# 5. استخدام المكتبة
 # في ملف Blade:
 @extends('dashboard-ui::layouts.app')
 ```
+
+### ❗ مشاكل في التثبيت؟
+
+راجع [QUICK_FIX.md](./QUICK_FIX.md) للحل السريع أو [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) للدليل الكامل.
 
 ### التثبيت اليدوي
 
@@ -98,6 +127,9 @@ dashboard_ui_view('layouts.app');
 
 ## 📚 التوثيق
 
+- **[QUICK_FIX.md](./QUICK_FIX.md)** ⚡ - حل سريع للمشاكل الشائعة
+- **[TROUBLESHOOTING.md](./TROUBLESHOOTING.md)** - دليل استكشاف الأخطاء الكامل
+- **[USAGE_FROM_GITHUB.md](./USAGE_FROM_GITHUB.md)** - استخدام المكتبة من GitHub
 - **[INSTALLATION.md](./INSTALLATION.md)** - دليل التثبيت التفصيلي
 - **[AUTO_INSTALL_SYSTEM.md](./AUTO_INSTALL_SYSTEM.md)** - دليل نظام التثبيت التلقائي
 - **[DASHBOARD_UI_README.md](./DASHBOARD_UI_README.md)** - دليل الاستخدام الكامل

@@ -3,7 +3,8 @@
 namespace Alyasi\DashboardUI;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Artisan;
+use Alyasi\DashboardUI\Commands\InstallCommand;
+use Alyasi\DashboardUI\Commands\PublishCommand;
 
 /**
  * Dashboard UI Service Provider
@@ -58,8 +59,8 @@ class DashboardUIServiceProvider extends ServiceProvider
         // تسجيل الأوامر (Commands)
         if ($this->app->runningInConsole()) {
             $this->commands([
-                Commands\InstallCommand::class,
-                Commands\PublishCommand::class,
+                InstallCommand::class,
+                PublishCommand::class,
             ]);
         }
     }
