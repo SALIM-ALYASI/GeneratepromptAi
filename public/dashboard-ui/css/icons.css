@@ -1,0 +1,56 @@
+/**
+ * Icons Integration - تكامل الأيقونات
+ * 
+ * هذا الملف يحتوي على أنماط إضافية لدعم مكتبات الأيقونات الخارجية
+ * مثل Font Awesome أو Heroicons
+ */
+
+/* Font Awesome Support - دعم Font Awesome */
+.fa,
+.fas,
+.far,
+.fal,
+.fab {
+    font-size: inherit;
+    width: 1em;
+    text-align: center;
+}
+
+/* Heroicons Support - دعم Heroicons */
+.heroicon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Sidebar Icons - أيقونات القائمة الجانبية */
+.sidebar-nav-icon .fa,
+.sidebar-nav-icon .heroicon {
+    font-size: 1.25rem;
+}
+
+/* Navbar Icons - أيقونات الشريط العلوي */
+.navbar-icon-btn .fa,
+.navbar-icon-btn .heroicon {
+    font-size: 1.125rem;
+}
+
+/* Custom Icon Styles - أنماط الأيقونات المخصصة */
+.icon-sm {
+    width: 1rem;
+    height: 1rem;
+}
+
+.icon-md {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.icon-lg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.icon-xl {
+    width: 2rem;
+    height: 2rem;
+}
